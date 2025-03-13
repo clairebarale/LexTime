@@ -35,10 +35,10 @@ We conducted our experiments using **Python 3.8.10**.
 To install dependencies, run: `pip install -r requirements.txt` (our requirements use CUDA 12).
 
 ## Language Analysis: Specificities of Legal Language
-In the [code/language_analysis](code/language_analysis) directory, we provide the code to run the linguistic analysis of our dataset, showing the specificities of the legal language. We compare **LexTime** with the **TRACIE** dataset that contains short stories, and we provide the results in the [code/language_analysis/output](code/language_analysis/output)  folder for both datasets. 
+In the [`code/language_analysis`](code/language_analysis) directory, we provide the code to run the linguistic analysis of our dataset, showing the specificities of the legal language. We compare **LexTime** with the **TRACIE** dataset that contains short stories, and we provide the results in the [code/language_analysis/outputs](code/language_analysis/outputs) folder for both datasets. 
 
 ## Inference and Error Analysis
-In the [code/inference](code/inference) directory, we provide the code as a shell script to run the experiments to test the capabilities of the models on our tasks.
+In the [`code/inference`](code/inference) directory, we provide the code as a shell script to run the experiments to test the capabilities of the models on our tasks.
 
 In the paper, we test the following models with and without chain-of-thought (CoT) and obtain the following results (on the whole dataset, 512 samples). Results for specific subsets and splits are in the paper. Each score is the average of three runs.
 
@@ -63,7 +63,7 @@ In the paper, we test the following models with and without chain-of-thought (Co
 | Flan-T5$_{Large}$      | 48.5 | 51.6 | 52.1 |
 | *+CoT*               | -    | 50.2 | 53.7 |
 
-In [code/error_analysis](code/error_analysis), we provide the random sample of 100 errors used in our paper\'s error analysis, as well as the outputs categorized by error type in each csv file.
+In [`code/error_analysis`](code/error_analysis), we provide the random sample of 100 errors used in our paper\'s error analysis, as well as the outputs categorized by error type in each csv file.
 
 
 
