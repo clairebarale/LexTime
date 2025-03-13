@@ -1,16 +1,28 @@
+"""
+This script parses the TRACIE and LexTime dataset and extracts temporal expressions and dependency trees.
+The extracted data is saved in two separate CSV files for further analysis and manual review.
+This is used to compare the linguistic properties of the two datasets and identify potential differences in the way events are reported.
+"""
+
 import pandas as pd
 import spacy
 import re
 
+# dowlnoad the spacy model so it can be loaded as a package below
+# python -m spacy download en_core_web_sm
+
 # Load the spaCy model
 nlp = spacy.load("en_core_web_sm")  # Use a larger model if needed (e.g., en_core_web_trf)
 
+
 files = [
-    "prompting/dataset_implicit_events/qa_tr.csv", 
-    "tracie_prompting/tracie_questions.csv"
+    "data/splits/lextime_512samples.csv", 
+    "data/tracie_sample.csv"
 ]
 
-# 1General Time Adverbs
+
+#### First, we define a set of temporal expressions and linguistic properties to extract from the text. Simple word search. 
+# General Time Adverbs
 general_time_adverbs = [
     "now", "then", "before", "after", "later", "soon", "earlier", "previously",
     "recently", "already", "immediately", "eventually", "finally", "formerly", "subsequently"
@@ -121,6 +133,7 @@ def extract_trees_and_modals(text):
         negations = [token.text for token in sorted_tokens if token.dep_ == "neg"]
 
         # Prepare empty columns for properties
+        # Empty fields will be filled in later and manually reviewed
         properties = {
             "tree": tree_text,
             "modal_verbs": ", ".join(modal_verbs) if modal_verbs else "",
@@ -203,7 +216,7 @@ def extract_temporal_properties(text):
     return pd.DataFrame([temporal_data])
 
 # Load dataset
-mydf = pd.read_csv(files[1], usecols=["paragraph"])
+mydf = pd.read_csv(files[1], usecols=["paragraph"]) # change based on the file we want to analyse.
 
 # Process first dataframe (trees, modals, negations)
 df_trees = pd.concat([extract_trees_and_modals(row["paragraph"]) for _, row in mydf.iterrows()], ignore_index=True)
@@ -214,6 +227,7 @@ df_trees = df_trees[df_trees["tree"] != ""]
 df_temporal = pd.concat([extract_temporal_properties(row["paragraph"]) for _, row in mydf.iterrows()], ignore_index=True)
 
 # Save the dataframes
-output_folder = "language_analysis/"
-df_trees.to_csv(output_folder + "tracie_trees_modals_negations.csv", index=False)
+output_folder = "code/language_analysis/outputs"
+# For now we split the analysis in 2 files, one for the trees and one for the temporal expressions:
+df_trees.to_csv(output_folder + "tracie_linguistic_analysis_modalities_negations.csv", index=False)
 df_temporal.to_csv(output_folder + "tracie_temporal_expressions.csv", index=False)
