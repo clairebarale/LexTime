@@ -9,16 +9,16 @@ This repository contains the data and code for **LexTime**, a benchmark designed
 LexTime is extracted from labor-related federal complaints in the United States.  
 We provide the dataset in the [`data/`](data/) directory.
 
-The [`splits/`](splits/) folder contains the fully formatted dataset in [`lextime_512samples.csv`](splits/lextime_512samples.csv) and its key subsets:
-- [`long_context.csv`](splits/long_context.csv): Contains paragraphs with more than 150 tokens.
-- [`short_context.csv`](splits/short_context.csv): Contains paragraphs with fewer than 150 tokens.
-- [`pairs_explicit_implicit.csv`](splits/pairs_explicit_implicit.csv): Queries where one event is implicit and the other is explicit.
-- [`pairs_explicit.csv`](splits/pairs_explicit.csv): Queries where both events are explicit.
+The [`data/splits`](data/splits) folder contains the fully formatted dataset in [`lextime_512samples.csv`](splits/lextime_512samples.csv) and its key subsets:
+- [`long_context.csv`](data/splits/long_context.csv): Contains paragraphs with more than 150 tokens.
+- [`short_context.csv`](data/splits/short_context.csv): Contains paragraphs with fewer than 150 tokens.
+- [`pairs_explicit_implicit.csv`](data/splits/pairs_explicit_implicit.csv): Queries where one event is implicit and the other is explicit.
+- [`pairs_explicit.csv`](data/splits/pairs_explicit.csv): Queries where both events are explicit.
 
 The dataset is stored in CSV format, with each row containing a **paragraph**, a **label**, and a **query**.
 
 The initial dataset annotations are provided in [`data/annotations/annotated_complaints.csv`](data/annotations/annotated_complaints.csv), with the following columns:
-- **paragraph**: The legal text excerpt.
+- **paragraph**: Paragraphs .
 - **query**: The temporal relation query.
 - **label**: Binary label (correct/incorrect).
 - **error (temporal/events)**: Error type.
