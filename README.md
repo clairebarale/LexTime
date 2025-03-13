@@ -9,7 +9,7 @@ This repository contains the data and code for **LexTime**, a benchmark designed
 LexTime is extracted from labor-related federal complaints in the United States.  
 We provide the dataset in the [`data/`](data/) directory.
 
-The [`data/splits`](data/splits) folder contains the fully formatted dataset in [`lextime_512samples.csv`](splits/lextime_512samples.csv) and its key subsets:
+The [`data/splits`](data/splits) folder contains the fully formatted dataset in [`lextime_512samples.csv`](data/splits/lextime_512samples.csv) and its key subsets:
 - [`long_context.csv`](data/splits/long_context.csv): Contains paragraphs with more than 150 tokens.
 - [`short_context.csv`](data/splits/short_context.csv): Contains paragraphs with fewer than 150 tokens.
 - [`pairs_explicit_implicit.csv`](data/splits/pairs_explicit_implicit.csv): Queries where one event is implicit and the other is explicit.
