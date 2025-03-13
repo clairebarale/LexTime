@@ -48,19 +48,19 @@ In the paper, we test the following models with and without chain-of-thought (Co
 | *+CoT*               | -    | 68.6 | 72.6 |
 | GPT-4 Turbo          | 70.2 | 75.1 | 77.2 |
 | *+CoT*               | -    | 77.6 | 74.3 |
-| Mistral$_{123B}$     | 61.9 | 70.1 | 73.9 |
+| Mistral_123B    | 61.9 | 70.1 | 73.9 |
 | *+CoT*               | -    | 67.8 | 72.4 |
-| LLaMA 3.1$_{70B}$    | 66.1 | 71.3 | 71.9 |
+| LLaMA 3.1_70B    | 66.1 | 71.3 | 71.9 |
 | *+CoT*               | -    | 69.3 | 66.6 |
-| LLaMA 3.1$_{8B}$     | 51.9 | 60.5 | 55.9 |
+| LLaMA 3.1_8B     | 51.9 | 60.5 | 55.9 |
 | *+CoT*               | -    | 48.4 | 54.6 |
-| LLaMA 3.1$_{8B}$ (Base) | 49.6 | 50.5 | 50.2 |
+| LLaMA 3.1_8B (Base) | 49.6 | 50.5 | 50.2 |
 | *+CoT*               | -    | 52.3 | 50.8 |
-| LLaMA 3.2$_{3B}$     | 52.2 | 53.5 | 51.0 |
+| LLaMA 3.2_3B     | 52.2 | 53.5 | 51.0 |
 | *+CoT*               | -    | 53.8 | 57.2 |
-| LLaMA 3.2$_{3B}$ (Base) | 50.6 | 52.3 | 52.9 |
+| LLaMA 3.2_3B (Base) | 50.6 | 52.3 | 52.9 |
 | *+CoT*               | -    | 52.9 | 48.8 |
-| Flan-T5$_{Large}$      | 48.5 | 51.6 | 52.1 |
+| Flan-T5_Large      | 48.5 | 51.6 | 52.1 |
 | *+CoT*               | -    | 50.2 | 53.7 |
 
 In [`code/error_analysis`](code/error_analysis), we provide the random sample of 100 errors used in our paper\'s error analysis, as well as the outputs categorized by error type in each csv file.
