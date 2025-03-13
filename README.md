@@ -35,7 +35,7 @@ We conducted our experiments using **Python 3.8.10**.
 To install dependencies, run: `pip install -r requirements.txt` (our requirements use CUDA 12).
 
 ## Language Analysis: Specificities of Legal Language
-In the [`code/language_analysis`](code/language_analysis) directory, we provide the code to run the linguistic analysis of our dataset, showing the specificities of the legal language. We compare **LexTime** with the **TRACIE** dataset that contains short stories, and we provide the results in the [code/language_analysis/outputs](code/language_analysis/outputs) folder for both datasets. 
+In the [`code/language_analysis`](code/language_analysis) directory, we provide the code to run the linguistic analysis of our dataset, showing the specificities of the legal language. We compare **LexTime** with the **TRACIE** dataset that contains short stories (Zhou et al., Temporal Reasoning on Implicit Events from Distant Supervision, NAACL 2021), and we provide the results in the [code/language_analysis/outputs](code/language_analysis/outputs) folder for both datasets. The **TRACIE** data sample can be found in the [data/tracie_sample.csv](data/tracie_sample.csv) file.
 
 ## Inference and Error Analysis
 In the [`code/inference`](code/inference) directory, we provide the code as a shell script to run the experiments to test the capabilities of the models on our tasks.
