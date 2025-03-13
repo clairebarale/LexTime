@@ -18,15 +18,15 @@ The [`data/splits`](data/splits) folder contains the fully formatted dataset in 
 The dataset is stored in CSV format, with each row containing a **paragraph**, a **label**, and a **query**.
 
 The initial dataset annotations are provided in [`data/annotations/annotated_complaints.csv`](data/annotations/annotated_complaints.csv), with the following columns:
-- **paragraph**: Paragraphs .
-- **query**: The temporal relation query.
-- **label**: Binary label (correct/incorrect).
+- **paragraph**: Context paragraph extracted from the text of the complaints.
+- **query**: Temporal relation query, containing 2 events and a temporal relationship.
+- **label**: Binary label (Yes/No).
 - **error (temporal/events)**: Error type.
-- **readability (1-4)**: Readability score.
+- **readability (1-4)**: Readability score of the query.
 - **relevance (1-4)**: Relevance score.
 - **event type (implicit/explicit)**: Categorization of events.
-- **relevant/irrelevant context paragraph**: Classification of the context.
-- **NOTES**: Additional annotations.
+- **relevant/irrelevant context paragraph**: Classification of the context relevance to a the legal process.
+- **NOTES**: Additional notes.
 
 
 ## Experiments 
