@@ -4,7 +4,7 @@
 
 This repository contains the data and code for **LexTime**, a benchmark designed for evaluating temporal reasoning in legal texts on the task of event ordering. The below figure shows an example of the task, where a model is asked to determine the temporal relationship between two events in a query in a legal context (one paragraph).
 
-![Task overview](image/task_overview.png)
+<img src="image/task_overview.png" alt="Task overview" width="500"/>
 
 ## LexTime Dataset
 
