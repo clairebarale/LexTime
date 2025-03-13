@@ -1,6 +1,6 @@
 # LexTime: A Benchmark for Temporal Reasoning in Legal Texts
 
-##Introduction
+## Introduction
 
 This repository contains the data and code for **LexTime**, a benchmark designed for evaluating temporal reasoning in legal texts on the task of event ordering.
 
